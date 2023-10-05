@@ -11,13 +11,39 @@ import HomeScreen from './screens/HomeScreen';
 function App() {
   return (
     <div>
-    <Navigation></Navigation>
-    <HomeScreen></HomeScreen>
+      <Navigation></Navigation>
+      <div style={styles.container}>
+        <div style={styles.columnContainer}>
+          <HomeScreen title={"Secret Garden"} subtitle={"(NewYork Times Best Seller, #1)"}></HomeScreen>
+          <HomeScreen title={"Dune"}></HomeScreen>
+          <HomeScreen></HomeScreen>
+          <HomeScreen></HomeScreen>
+        </div>
+        <div style={styles.columnContainer}>
+          <HomeScreen></HomeScreen>
+          <HomeScreen></HomeScreen>
+          <HomeScreen></HomeScreen>
+          <HomeScreen></HomeScreen>
+        </div>
+      </div>
     </div>
-    
+
   );
 }
 const styles = {
+  container: {
+    display: "flex",
+    flexDirection: "row",
+},
+  columnContainer:{
+    width: "50%",
+    justifyContent: "center",
+    alignItems: "center",
+    
+    display: "flex",
+    flexDirection: "column"
+  },
   
+
 }
 export default App;
